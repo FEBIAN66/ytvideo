@@ -17,7 +17,7 @@ exports.updateVideo = functions.pubsub.schedule('every 10 minutes').onRun(async 
     version: 'v3',
   });
 
-  const videoId = '4ErTK92HPCU';
+  const videoId = 'qqnmvKwBa9A';
 
   const videoResult = await youtube.videos.list({
     id: videoId,
