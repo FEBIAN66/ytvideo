@@ -3,8 +3,8 @@ const {google} = require('googleapis');
 
 exports.updateVideo = functions.pubsub.schedule('every 10 minutes').onRun(async () => {
   const authClient = new google.auth.OAuth2({
-    clientId: '<client id here>',
-    clientSecret: '<client secret here>',
+    clientId: '778779465616-2lnl9qk8qn607ps87a0n155onp610urc.apps.googleusercontent.com',
+    clientSecret: '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',
   });
 
   authClient.setCredentials({
