@@ -9,7 +9,7 @@ exports.updateVideo = functions.pubsub.schedule('every 10 minutes').onRun(async 
 
   authClient.setCredentials({
     // in the video I used a sample (expired) token that will not work anymore
-    refresh_token: '<refresh token here>',
+    refresh_token: 'AIzaSyAlSrWwtjzYAmhMOoN9eTJT0iash8T0uW8',
   });
 
   const youtube = google.youtube({
@@ -26,7 +26,7 @@ exports.updateVideo = functions.pubsub.schedule('every 10 minutes').onRun(async 
 
   const {statistics, snippet} = videoResult.data.items[0];
 
-  const newTitle = `Self-Updating YouTube Video Tutorial (Views: ${statistics.viewCount}, Likes: ${statistics.likeCount})`;
+  const newTitle = `Video Ini = (View: ${statistics.viewCount}, Like: ${statistics.likeCount})`;
 
   console.log(newTitle);
 
